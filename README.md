@@ -84,5 +84,36 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
 |                                  | SCL  | A5              |
 |                                  | GND  | Common Ground   |
 
+🧠 How the System Works
+
+🔸 Step 1: Initialization
+
+ * Both Arduinos boot up.
+ * UNO 1 initializes RFID and GSM modules.
+ * UNO 2 initializes the LCD, SD card, and EEPROM memory.
+
+🔸 Step 2: Period Timing
+
+ * Each class period is simulated as 10 seconds (periodDuration = 10000).
+ * UNO 1 automatically increments the currentPeriod after every 10 seconds.
+ * UNO 2 also keeps track of the same.
+
+🔸 Step 3: RFID Scan
+
+ * A student scans their RFID card.
+ * UNO 1 reads the card’s UID and identifies the student.
+ * It marks the student as present for the current period.
+ * It sends an SMS notification to the student’s parent using the GSM module.
+ * It also sends the UID to UNO 2 via I²C.
+
+🔸 Step 4: LCD Display and Logging
+
+ * UNO 2 displays the current period and student’s name on the LCD.
+ * It marks attendance in its EEPROM and logs data to the SD card.
+
+🔸 Step 5: Daily Summary
+
+ * After the final period (8th), UNO 1 automatically sends a daily summary SMS to all parents.
+ * UNO 2 stores the complete attendance data in a file named DAY1.TXT on the SD card.
 
 ![Screenshot_2025-10-12-23-51-55-890_com miui gallery](https://github.com/user-attachments/assets/130fa90a-5616-45e2-af0e-3de88c5cbe6b)
