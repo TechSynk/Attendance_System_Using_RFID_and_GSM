@@ -33,7 +33,8 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
 🧩 Hardware Required
 
 Component              Quantity    Description
-Arduino UNO	              2	       One for Master (RFID + GSM), one for Slave (LCD + SD)
+Arduino UNO	       	      2 	       ㅤㅤㅤㅤㅤㅤㅤ
+2	       One for Master (RFID + GSM), one for Slave (LCD + SD)
 MFRC522 RFID Module	      1	       To scan RFID cards
 GSM Module	              1	       For sending SMS
 I²C LCD 16x2	            1	       Displays attendance info
