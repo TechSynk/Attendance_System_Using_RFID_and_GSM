@@ -32,17 +32,17 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
 
 🧩 Hardware Required
 
-Component              Quantity    Description
-Arduino UNO	       	      2 	       ㅤㅤㅤㅤㅤㅤㅤ
-2	       One for Master (RFID + GSM), one for Slave (LCD + SD)
-MFRC522 RFID Module	      1	       To scan RFID cards
-GSM Module	              1	       For sending SMS
-I²C LCD 16x2	            1	       Displays attendance info
-SD Card Module	          1	       Stores attendance logs
-EEPROM (built-in)	        -	       Used for data backup
-Jumper Wires	            -	       For connections
-Breadboard	              1	       For circuit setup
-RFID Tags/Cards	          5	       For student IDs
+| Component                      | Quantity | Description                                           |
+| ------------------------------ | -------- | ----------------------------------------------------- |
+| Arduino UNO                    | 2        | One for Master (RFID + GSM), one for Slave (LCD + SD) |
+| MFRC522 RFID Module            | 1        | To scan RFID cards                                    |
+| GSM Module (SIM800L / SIM900A) | 1        | For sending SMS                                       |
+| I²C LCD 16x2                   | 1        | Displays attendance info                              |
+| SD Card Module                 | 1        | Stores attendance logs                                |
+| EEPROM (built-in)              | -        | Used for data backup                                  |
+| Jumper Wires                   | -        | For connections                                       |
+| Breadboard                     | 1        | For circuit setup                                     |
+| RFID Tags/Cards                | 5        | For student IDs                                       |
 
 
 ![Screenshot_2025-10-12-23-51-55-890_com miui gallery](https://github.com/user-attachments/assets/130fa90a-5616-45e2-af0e-3de88c5cbe6b)
