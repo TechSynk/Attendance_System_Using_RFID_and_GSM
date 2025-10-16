@@ -116,4 +116,30 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
  * After the final period (8th), UNO 1 automatically sends a daily summary SMS to all parents.
  * UNO 2 stores the complete attendance data in a file named DAY1.TXT on the SD card.
 
+💾 Data Storage Example (DAY1.TXT)
+
+Student   P1 P2 P3 P4 P5 P6 P7 P8
+Jothis    1  1  0  1  0  1  1  1
+Jibin     1  0  1  1  1  0  1  1
+Shaheem   0  1  1  1  1  1  0  1
+Jomson    1  1  1  1  1  1  1  1
+Rahul     1  1  0  0  1  1  0  0
+
+📱 SMS Format Examples
+
+✅ Real-time attendance:
+
+Attendance marked for Jothis (Period 3)
+
+📊 Daily summary:
+
+Attendance Summary for Jibin:
+P1: Present
+P2: Absent
+P3: Present
+...
+P8: Present
+
+
+
 ![Screenshot_2025-10-12-23-51-55-890_com miui gallery](https://github.com/user-attachments/assets/130fa90a-5616-45e2-af0e-3de88c5cbe6b)
