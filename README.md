@@ -32,6 +32,7 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
 
 🧩 Hardware Required
 
+
 | Component                      | Quantity | Description                                           |
 | ------------------------------ | -------- | ----------------------------------------------------- |
 | Arduino UNO                    | 2        | One for Master (RFID + GSM), one for Slave (LCD + SD) |
@@ -43,6 +44,45 @@ Both Arduinos communicate via I²C (Inter-Integrated Circuit) communication.
 | Jumper Wires                   | -        | For connections                                       |
 | Breadboard                     | 1        | For circuit setup                                     |
 | RFID Tags/Cards                | 5        | For student IDs                                       |
+
+🔌 Pin Diagram and Connections
+
+🧭 UNO 1 (Master) – RFID + GSM + I2C
+
+| Module                      | Pin  | Arduino UNO Pin |
+| --------------------------- | ---- | --------------- |
+| **MFRC522 RFID**            | SDA  | 10              |
+|                             | SCK  | 13              |
+|                             | MOSI | 11              |
+|                             | MISO | 12              |
+|                             | RST  | 9               |
+|                             | VCC  | 3.3V            |
+|                             | GND  | GND             |
+| **GSM Module (SIM800L)**    | TX   | 8               |
+|                             | RX   | 7               |
+|                             | VCC  | 5V              |
+|                             | GND  | GND             |
+| **I²C Connection to Slave** | SDA  | A4              |
+|                             | SCL  | A5              |
+|                             | GND  | Common Ground   |
+
+🧭 UNO 2 (Slave) – LCD + SD Card + EEPROM + I2C
+
+| Module                           | Pin  | Arduino UNO Pin |
+| -------------------------------- | ---- | --------------- |
+| **SD Card Module**               | CS   | 10              |
+|                                  | MOSI | 11              |
+|                                  | MISO | 12              |
+|                                  | SCK  | 13              |
+|                                  | VCC  | 5V              |
+|                                  | GND  | GND             |
+| **I²C LCD Display**              | SDA  | A4              |
+|                                  | SCL  | A5              |
+|                                  | VCC  | 5V              |
+|                                  | GND  | GND             |
+| **I²C Connection (from Master)** | SDA  | A4              |
+|                                  | SCL  | A5              |
+|                                  | GND  | Common Ground   |
 
 
 ![Screenshot_2025-10-12-23-51-55-890_com miui gallery](https://github.com/user-attachments/assets/130fa90a-5616-45e2-af0e-3de88c5cbe6b)
